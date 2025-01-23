@@ -1,3 +1,5 @@
+#ifndef _MD5_H_
+#define _MD5_H_
 /* MD5.H - header file for MD5C.C
  */
 
@@ -23,6 +25,12 @@
    documentation and/or software.
  */
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "global.h"
+
 /* MD5 context. */
 typedef struct {
   UINT4 state[4];                                   /* state (ABCD) */
@@ -31,5 +39,11 @@ typedef struct {
 } MD5_CTX;
 
 void MD5Init PROTO_LIST((MD5_CTX *));
-void MD5Update PROTO_LIST((MD5_CTX *, unsigned char *, unsigned int));
+void MD5Update PROTO_LIST((MD5_CTX *, const unsigned char *, unsigned int));
 void MD5Final PROTO_LIST((unsigned char [16], MD5_CTX *));
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // _MD5_H_
