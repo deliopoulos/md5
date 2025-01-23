@@ -1,0 +1,29 @@
+{
+  "name": "md5",
+  "version": "0.0.1",
+  "keywords": "arduino, md5-hash, cryptography",
+  "description": "MD5 Hash Algorithm, based on Ronald Linn Rivest design.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deliopoulos/md5.git"
+  },
+  "authors": [
+    {
+      "name": "Ronald Linn Rivest",
+      "url": "https://people.csail.mit.edu/rivest/"
+    },
+    {
+      "name": "Dimitris Iliopoulos",
+      "email": "webmaster@deliopoulos.net",
+      "url": "https://github.com/deliopoulos"
+    }
+  ],
+  "export": {
+    "include": ["src", "LICENSE"]
+  },
+  "frameworks": "*",
+  "platforms": "*",
+  "build": {
+    "libArchive": false
+  }
+}
